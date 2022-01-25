@@ -23,19 +23,19 @@ def when_started1():
     global myVariable
     while True:
         if left_bumper.pressed() or down_eye.detect(RED):
-            drivetrain.drive_for(REVERSE, 22, MM)
+            drivetrain.drive_for(REVERSE, 30, MM)
             if down_eye.detect(RED):
                 while down_eye.detect(RED):
-                    direct = drivetrain.turn_for(LEFT, r.randint(1,180), DEGREES)
+                    direct = drivetrain.turn_for(LEFT, 10, DEGREES)
             else:
                 drivetrain.turn_for(LEFT, r.randint(1,180), DEGREES)
             print(direct)
 
         if right_bumper.pressed() or down_eye.detect(RED):
-            drivetrain.drive_for(REVERSE, 22, MM)
+            drivetrain.drive_for(REVERSE, 30, MM)
             if down_eye.detect(RED):
                 while down_eye.detect(RED):
-                    direct = drivetrain.turn_for(RIGHT, r.randint(1,180), DEGREES)
+                    direct = drivetrain.turn_for(RIGHT, 10, DEGREES)
             else:
                 drivetrain.turn_for(RIGHT, r.randint(1,180), DEGREES)
 
